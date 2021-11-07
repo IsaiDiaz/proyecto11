@@ -1,0 +1,16 @@
+<div class="container" style="display: block; margin-right: 20%; margin-left: 20%;">
+    <h1>Catálogo de Productos</h1>
+    <div *ngFor="let current of celulares">
+        <div class="container">
+            <div class="card" style="width: 60%; margin-bottom: 50px; text-align: justify;">
+                <img src={{current.imagen}} class="card-img-top" alt="celular" style="width: 60%; margin-left: 20%; margin-right: 20%;">
+                <div class="card-body" style="color: black;">
+                    <h5 class="card-title">{{ current.nombre }}</h5>
+                    <p class="card-text">{{ current.descripcionLarga}}</p>
+                    <p>{{current.precio}}</p>
+                    <a href="celulares" class="btn btn-primary">Comprar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
