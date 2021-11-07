@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Celular, celulares} from '../celulares'
 
 @Component({
   selector: 'app-formulario-web',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulario-web.component.css']
 })
 export class FormularioWebComponent implements OnInit {
+
+  celulares=celulares;
 
   constructor() { }
 

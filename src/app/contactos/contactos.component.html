@@ -1,1 +1,67 @@
-<h1>contactos works!</h1>
+<div class="container col-xxl-8 px-4 py-5">
+    <h1>Contactos</h1>
+    <h2>Informacion de la tienda</h2>
+    <div class="container align-content-center">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.062882065138!2d-68.11364880892866!3d-16.522922762319002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f20ee187a3103%3A0x2f2bb2b7df32a24d!2sUniversidad%20Cat%C3%B3lica%20Boliviana%20%22San%20Pablo%22%20Regional%20La%20Paz!5e0!3m2!1ses!2sbo!4v1630811238120!5m2!1ses!2sbo"
+            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="container align-content-center" style="text-align: justify;">
+        <p>Tienda especializada en tecnologia y venta de celulares "Tecno-cel". Explore nuestro catalogo para encontrar su celular ideal, por favor, complete el siguiente formulario para realizar un comentario o sugerencia.</p>
+        <h2>Redes Sociales</h2>
+        <div style="display: flex;">
+            <div class="col-4">
+                <a target="_blanck"  href="https://www.facebook.com/UCB.BOLIVIA"><img src="./assets/facebook.png" alt="facebook" width="100" ></a>
+            </div>
+            <div class="col-4 " style="margin: auto;">
+                <a target="_blanck"  href="https://l.facebook.com/l.php?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D59175851671%26app%3Dfacebook%26entry_point%3Dpage_cta%26fbclid%3DIwAR3F08Zfjf-8V4pP69oHjsYumuA2AxxsicnlbMYpgO4G6wTBUkQjyXYEgrI&h=AT0CelC0I42UxdEgw0_8CWHCVbrN_n_NA1rqhJp9aFedajXyghOKlGbSC7u1NK2I1LVuDE4qYHR6hTeooefPhr-kcyGmGaasyenAmTwi06WbWPEkGU_mzHK15lUuySZzZrLMRf3UPs-CWyKPLQ"><img src="./assets/whatsapp.png" alt="whatsapp" width="75" ></a>
+            </div>
+            <div class="col-4">
+                <a target="_blanck"  href="https://www.instagram.com/ucb.lapaz/?hl=es"><img src="./assets/instagram.png" alt="instagram" width="100"  ></a>
+            </div>
+        </div>
+    </div>
+    <h2>Formulario</h2>
+    <form method="POST" class="row g-3">
+        <div class="col-6">
+            <label for="inputName" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre">
+        </div>
+        <div class="col-6">
+            <label for="inputCel" class="form-label">Nro. Celular</label>
+            <input type="text" class="form-control" id="inputCel" name="celular">
+        </div>
+        <div class="col-6">
+            <label for="inputEmail" class="form-label">Email</label>
+            <input type="text" class="form-control" name="email" id="inputEmail" placeholder="Correo electronico">
+        </div>
+        <div class="col-6">
+            <label for="inputCity" class="form-label">ciudad</label>
+            <select class="form-select" id="validationTooltip04" name="ciudad">
+                <option selected disabled value="">Elegir...</option>
+                <option value="La Paz">La Paz</option>
+                <option value="Cochabamba">Cochabamba</option>
+                <option value="Santa Cruz">Santa Cruz</option>
+                <option value="Pando">Pando</option>
+                <option value="Beni">Beni</option>
+                <option value="Oruro">Oruro</option>
+                <option value="Potosí">Potosí</option>
+                <option value="Chuquisaca">Chuquisaca</option>
+                <option value="Tarija">Tarija</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <label for="inputMsj" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="Msj" name="mensaje" placeholder="Ingrese aqui su comentario o sugerencia"></textarea>
+        </div>
+        <div class="col-4">
+            <button type="submit" class="btn btn-success" name="enviar">Enviar</button>
+        </div>
+        <div class="col-4">
+            <button class="btn btn-danger" type="reset">Borrar</button>
+        </div>
+        <div class="col-4">
+            <button type="button" class="btn btn-primary" onclick="location.href='home'">Salir</button>
+        </div>
+    </form>
+</div>
