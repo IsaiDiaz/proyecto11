@@ -1,25 +1,25 @@
 <div class="container col-xxl-8 px-4 py-5">
     <h1>Formulario</h1>
-    <form method="POST" class="row g-3 needs-validation" novalidate>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="row g-3 ">
         <div class="col-md-6 position-relative">
             <label for="validationTooltip01" class="form-label">Nombre Completo</label>
-            <input type="text" class="form-control" name="nombre" required>
+            <input type="text" class="form-control" formControlName="nombre" required>
         </div>
         <div class="col-md-6 position-relative">
             <label for="validationTooltip02" class="form-label">CI</label>
-            <input type="text" class="form-control" name="CI" required>
+            <input type="text" class="form-control" formControlName="CI" required>
         </div>
         <div class="col-md-6 position-relative">
             <label for="validationTooltip03" class="form-label">Nro telefono</label>
-            <input type="text" class="form-control" name="telefono" required>
+            <input type="text" class="form-control" formControlName="telefono" required>
         </div>
         <div class="col-md-6 position-relative">
             <label for="validationTooltip03" class="form-label">Correo</label>
-            <input type="text" class="form-control" name="correo" required>
+            <input type="text" class="form-control" formControlName="correo" required>
         </div>
         <div class="col-md-6 position-relative">
                 <label for="validationTooltipUsername" class="form-label">Celular</label>
-                <select name="celular" class="form-select" id="">
+                <select formControlName="celular" class="form-select" id="">
                     <option selected value="-1" disabled>
                         Seleccione una opción
                     </option>
@@ -30,7 +30,7 @@
         </div>
         <div class="col-md-6 position-relative">
             <label for="validationTooltip03" class="form-label">Descuento total</label>
-            <input type="text" class="form-control" name="descuento" value="0%" disabled>
+            <input type="text" class="form-control" formControlName="descuento" placeholder="0%" readonly>
         </div>
         <div class="container row g-3 col-12">
         <div class="col-4">

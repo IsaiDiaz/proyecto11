@@ -1,14 +1,14 @@
 <div class="container" style="display: block; margin-right: 20%; margin-left: 20%;">
     <h1>Ultimos Productos</h1>
     <div *ngFor="let current of celulares; let indice=index">
-        <div *ngIf="indice <= 2">
+        <div *ngIf="indice <= 1">
             <div class="container">
                 <div class="card" style="width: 60%; margin-bottom: 50px; text-align: justify;">
                     <img src={{current.imagen}} class="card-img-top" alt="celular" style="width: 60%; margin-left: 20%; margin-right: 20%;">
                     <div class="card-body" style="color: black;">
                         <h5 class="card-title">{{ current.nombre }}</h5>
                         <p class="card-text">{{ current.descripcionCorta }}</p>
-                        <p class="card-text">{{current.precio}}</p>
+                        <p class="card-text">{{current.precio}} BOB</p>
                         <a href="celulares" class="btn btn-primary">Ver mas</a>
                     </div>
                 </div>

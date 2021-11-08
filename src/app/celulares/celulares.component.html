@@ -7,8 +7,8 @@
                 <div class="card-body" style="color: black;">
                     <h5 class="card-title">{{ current.nombre }}</h5>
                     <p class="card-text">{{ current.descripcionLarga}}</p>
-                    <p>{{current.precio}}</p>
-                    <a href="celulares" class="btn btn-primary">Comprar</a>
+                    <p>{{current.precio}} BOB</p>
+                    <button class="btn btn-primary" (click)="addToCart(current)" >Comprar</button>
                 </div>
             </div>
         </div>

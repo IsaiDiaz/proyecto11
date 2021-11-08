@@ -15,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 import { CelularesComponent } from './celulares/celulares.component';
 import { FormularioWebComponent } from './formulario-web/formulario-web.component';
 import { ContactosComponent } from './contactos/contactos.component';
+import { CarritoComponent } from './carrito/carrito.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { ContactosComponent } from './contactos/contactos.component';
     HomeComponent,
     CelularesComponent,
     FormularioWebComponent,
-    ContactosComponent
+    ContactosComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,9 @@ import { ContactosComponent } from './contactos/contactos.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

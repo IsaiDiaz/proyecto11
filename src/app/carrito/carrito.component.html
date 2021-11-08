@@ -1,0 +1,22 @@
+<div class="container col-xxl-8 px-4 py-5">
+    <h2>Carrito</h2>
+    <div *ngFor="let current of celulares">
+        <div class="container">
+            <div class="card" style="width: 60%; margin-bottom: 50px; text-align: justify;">
+                <img src={{current.imagen}} class="card-img-top" alt="celular"
+                    style="width: 60%; margin-left: 20%; margin-right: 20%;">
+                <div class="card-body" style="color: black;">
+                    <h5 class="card-title">{{ current.nombre }}</h5>
+                    <p class="card-text">{{current.precio}} BOB</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="celulares.length>0;else vacio">
+        <button class="btn btn-danger" (click)="limpiar()">Limpiar</button>
+    </div>
+    <ng-template #vacio>
+        <p>Carrito vacío</p>
+    </ng-template>
+    <button class="btn btn-primary" (click)="actualizar()">Actualizar</button>
+</div>

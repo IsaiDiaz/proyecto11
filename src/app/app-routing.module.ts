@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { CelularesComponent } from './celulares/celulares.component';
 import { FormularioWebComponent } from './formulario-web/formulario-web.component';
 import { ContactosComponent } from './contactos/contactos.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,9 @@ const routes: Routes = [
   {
     path:'contactos',
     component:ContactosComponent
+  },
+  {
+    path:'carrito', component:CarritoComponent
   }
 ];
 
