@@ -1,24 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Celular,celulares } from './celulares';
+import {Celular} from './celulares';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CarritoService {
   items: Celular[]=[];
  
-  constructor() { 
-    this.items=[];
-  }
+  constructor() {}
 
   add(celular: Celular){
     this.items.push(celular);
   }
 
-  obtenerItems(): Celular[]{
+  obtenerItems(){
     return this.items;
   }
 
-  limpiar(): Celular[]{
+  limpiar(){
     this.items=[];
     return this.items;
   }

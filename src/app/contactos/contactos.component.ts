@@ -8,7 +8,23 @@ import { FormBuilder } from '@angular/forms';
 })
 export class ContactosComponent implements OnInit {
 
-  constructor() { }
+  formulario=this.formBuilder.group({
+    nombre: '',
+    celular:'',
+    email:'',
+    ciudad: '',
+    mensaje: ''
+  });
+
+  constructor(
+    private formBuilder: FormBuilder
+  ) { }
+
+  onSubmit():void {
+    console.warn('Mensaje registrado',this.formulario.value);
+    window.alert("Mensaje registrado");
+    this.formulario.reset();
+  }
 
   ngOnInit(): void {
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Celular, celulares} from '../celulares'
 import { FormBuilder } from '@angular/forms';
+import { CarritoService } from '../carrito.service';
 
 @Component({
   selector: 'app-formulario-web',
@@ -20,7 +21,8 @@ export class FormularioWebComponent implements OnInit {
   });
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    public carritoService: CarritoService
   ) { }
 
   onSubmit():void {

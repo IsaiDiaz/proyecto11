@@ -22,22 +22,22 @@
         </div>
     </div>
     <h2>Formulario</h2>
-    <form method="POST" class="row g-3">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="row g-3">
         <div class="col-6">
             <label for="inputName" class="form-label">Nombre</label>
-            <input type="text" class="form-control" name="nombre">
+            <input type="text" class="form-control" formControlName="nombre">
         </div>
         <div class="col-6">
             <label for="inputCel" class="form-label">Nro. Celular</label>
-            <input type="text" class="form-control" id="inputCel" name="celular">
+            <input type="text" class="form-control" id="inputCel" formControlName="celular">
         </div>
         <div class="col-6">
             <label for="inputEmail" class="form-label">Email</label>
-            <input type="text" class="form-control" name="email" id="inputEmail" placeholder="Correo electronico">
+            <input type="text" class="form-control" formControlName="email" id="inputEmail" placeholder="Correo electronico">
         </div>
         <div class="col-6">
             <label for="inputCity" class="form-label">ciudad</label>
-            <select class="form-select" id="validationTooltip04" name="ciudad">
+            <select class="form-select" id="validationTooltip04" formControlName="ciudad">
                 <option selected disabled value="">Elegir...</option>
                 <option value="La Paz">La Paz</option>
                 <option value="Cochabamba">Cochabamba</option>
@@ -52,7 +52,7 @@
         </div>
         <div class="col-12">
             <label for="inputMsj" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="Msj" name="mensaje" placeholder="Ingrese aqui su comentario o sugerencia"></textarea>
+            <textarea class="form-control" id="Msj" formControlName="mensaje" placeholder="Ingrese aqui su comentario o sugerencia"></textarea>
         </div>
         <div class="col-4">
             <button type="submit" class="btn btn-success" name="enviar">Enviar</button>

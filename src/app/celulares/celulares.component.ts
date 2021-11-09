@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Celular, celulares} from '../celulares'
 import { CarritoService } from '../carrito.service';
-import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-celulares',
   templateUrl: './celulares.component.html',
@@ -9,18 +9,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CelularesComponent implements OnInit {
   celulares=celulares;
-
+  
   constructor(
-    private route: ActivatedRoute,
-    private carrito: CarritoService
+    private carritoService: CarritoService
   ) { }
 
   addToCart(celular: Celular){
-    this.carrito.add(celular);
+    this.carritoService.add(celular);
     window.alert("Celular "+celular.nombre+" agregado al carrito")
   }
 
   ngOnInit(): void {
+   
   }
 
 }

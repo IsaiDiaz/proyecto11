@@ -8,19 +8,16 @@ import { CarritoService } from '../carrito.service';
 })
 export class CarritoComponent implements OnInit {
 
-  celulares=this.carrito.obtenerItems();
-
   constructor(
-    private carrito: CarritoService
-  ) { }
+    public carritoService: CarritoService
+  ) {}
 
   limpiar(){
-    this.carrito.limpiar();
+    this.carritoService.limpiar();
   }
 
   actualizar(){
-    this.celulares=this.carrito.obtenerItems();
-    window.alert("Actualizado")
+   this.carritoService.obtenerItems();
   }
 
   ngOnInit(): void {

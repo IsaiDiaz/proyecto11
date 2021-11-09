@@ -17,6 +17,7 @@ import { FormularioWebComponent } from './formulario-web/formulario-web.componen
 import { ContactosComponent } from './contactos/contactos.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CarritoService } from './carrito.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [CarritoService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
